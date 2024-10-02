@@ -22,7 +22,12 @@
     <PackageReleaseNotes>.NET Standard 2.0 update</PackageReleaseNotes>
     <FileVersion>6.0</FileVersion>
     <Company>USDA Forest Service</Company>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\Core-Model-v8-LINUX\build\extensions</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -40,16 +45,16 @@
 
   <ItemGroup>
     <Reference Include="Landis.Library.Metadata-v2">
-      <HintPath>lib\Landis.Library.Metadata-v2.dll</HintPath>
+      <HintPath>..\..\Support-Library-Dlls-v8\Landis.Library.Metadata-v2.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.Parameters-v2">
-      <HintPath>lib\Landis.Library.Parameters-v2.dll</HintPath>
+      <HintPath>..\..\Support-Library-Dlls-v8\Landis.Library.Parameters-v2.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.PnETCohorts-v2">
-      <HintPath>lib\Landis.Library.PnETCohorts-v2.dll</HintPath>
+      <HintPath>..\..\Support-Library-Dlls-v8\Landis.Library.PnETCohorts-v2.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.UniversalCohorts-v1">
-      <HintPath>lib\Landis.Library.UniversalCohorts-v1.dll</HintPath>
+      <HintPath>..\..\Support-Library-Dlls-v8\Landis.Library.UniversalCohorts-v1.dll</HintPath>
     </Reference>
   </ItemGroup>
 
